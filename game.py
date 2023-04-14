@@ -80,10 +80,26 @@ class Button():
 
 
 def myFunction():
-    print('Button Pressed')
+    apt = pygame.image.load("apt.jpg")
+    running = True
+    while running:
+        # display_surface.fill(white)
+        # display_surface.blit(text, textRect)
+        window.blit(apt, (i, 0))
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+
+        for object in objects:
+            object.process()
+
+        pygame.display.update()
+        pygame.display.flip()
+
+    pygame.quit()
 
 
-customButton = Button(60, 60, 300, 100, 'START GAME', myFunction)
+customButton = Button(370, 550, 300, 100, 'START GAME', myFunction)
 
 
 def homepg():
