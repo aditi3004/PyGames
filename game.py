@@ -13,8 +13,8 @@ import pygame
 from pygame.locals import *
 
 # Global Variables for the game
-window_width = 900
-window_height = 443
+window_width = 700
+window_height = 600
 
 # set height and width of window
 window = pygame.display.set_mode((window_width, window_height))
@@ -244,9 +244,9 @@ while True:
 					window.blit(game_images['sea_level'], (ground, elevation))
 					
 					# Just Refresh the screen
-			        pygame.display.update()		
+			pygame.display.update()		
 					
 					# set the rate of frame per second
-			        framepersecond_clock.tick(framepersecond)
+			framepersecond_clock.tick(framepersecond)
 
 
